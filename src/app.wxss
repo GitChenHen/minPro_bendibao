@@ -1,0 +1,17 @@
+/**app.wxss**/
+
+.container {
+  /* min-height: 100vh; */
+  background-color: #eee;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  /* 隐藏盒子 */
+  visibility: hidden;
+  clear: both; 
+  overflow: auto;
+  zoom: 1;
+}

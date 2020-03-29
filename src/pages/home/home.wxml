@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{sliderList}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.image}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 九宫格 -->
+  <view class="nine clearfix">
+    <navigator url="/pages/list/list?id={{item.id}}&title={{item.name}}" class="nine-item" wx:for="{{nineList}}" wx:key="index">
+      <image src="{{item.icon}}"></image>
+      <view>{{item.name}}</view>
+    </navigator>
+  </view>
+  <!-- 本地特产 -->
+  <view class="product">
+    <view class="pro_title">本地特产</view>
+    <view class="pro_list">
+      <navigator open-type="navigate" url="/pages/productDetail/productDetail?id={{item.id}}&title={{item.title}}" class="list_item" wx:for="{{productList}}" wx:key="index">
+        <image src="{{item.imgurl}}"></image>
+        <view class="content">
+          <view class="info">{{item.info}}</view>
+          <view class="price">
+            <text>{{item.price}}</text>
+            <text>{{item.oldPrice}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

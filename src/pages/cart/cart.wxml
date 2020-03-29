@@ -1,0 +1,47 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <!--  头部编辑部分-->
+  <view class="headEdit clearfix">
+    <button size="mini" bindtap="handleEdit">{{editText}}</button>
+  </view>
+  <!-- 商品列表部分 -->
+  <view class="productBox">
+    <view class="list" wx:for="{{cartList}}" wx:key="index">
+      <radio-group class="singleRadio">
+        <radio checked="{{singleCheck}}" data-index="{{index}}" bindtap="handleSingle"></radio>
+      </radio-group>
+      <view class="info">
+        <image src="{{item.img}}"></image>
+        <view class="content">
+          <text>{{item.info}}</text>
+          <text>￥{{item.price}}</text>
+        </view>
+        <!-- 商品数量加减 -->
+        <view class="score">
+          <button>-</button>
+          <input value="{{item.num}}"></input>
+          <button>+</button>
+        </view>
+        <!-- 单选框选择跳出编辑按钮 -->
+        <view class="singelDel" wx:if="{{item.singleCheck =='true'}}">
+          <button type="warn">-</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部结算操作 -->
+  <view class="footerSum">
+    <radio-group class="allCheck">
+      <radio checked="{{allCheck}}" bindtap="handleAllCheck">全选</radio>
+    </radio-group>
+    <!-- 当头部按钮为编辑时=〉底部显示结算按钮 -->
+    <view class="Sum" wx:if="{{editText === '编辑'}}">
+      <text>总计：￥{{sumMoney}}</text>
+      <button type="warn">结算</button>
+    </view>
+    <!-- 当头部按钮为完成时=〉底部显示删除按钮 -->
+    <view class="Del" wx:if="{{editText === '完成'}}">
+      <button type="warn">删除</button>
+    </view>
+  </view>
+</view>

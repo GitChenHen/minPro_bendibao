@@ -1,0 +1,107 @@
+/* pages/cart/cart.wxss */
+.container{
+  min-height: 100vh;
+  padding-bottom: 100rpx;
+}
+/* 头部样式 */
+.headEdit{
+  padding: 10rpx 20rpx;
+  background-color: #fff; 
+}
+.headEdit button{
+  float: right;
+}
+/* 商品信息样式 */
+.productBox{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.productBox .list{
+  display: flex;
+  /* 垂直方向上水平对齐 */
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+
+}
+.productBox .list .singleRadio{
+  width: 80rpx;
+}
+.productBox .list .info{
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+/* 只显示两行内容 */
+.list .info .content text:first-child{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  padding-right: 50rpx;
+}
+.list .info .score{
+  display: flex;
+  position: absolute;
+  width: 200rpx;
+  right: 0;
+  bottom: 0;  
+  border: 1px solid #ccc;
+} 
+.info .score button{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.info .score input{
+  flex: 1;
+  text-align: center;
+}
+.list .info image{
+    width: 200rpx;
+    height: 200rpx;
+    display: flex;
+    flex: 3;
+}
+.list .info .content{
+  display: flex;
+  flex:7;
+  flex-direction: column;
+  margin-left: 40rpx;
+}
+.info .content text:last-child{
+  color: red;
+}
+.info .singelDel button{
+  display: flex;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+/* 底部样式 */
+.footerSum{
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  height: 100rpx;
+  background-color: #fff;
+}
+.footerSum .allCheck{
+  margin-left: 30rpx;
+}
+.footerSum .Sum{
+  display: flex;
+}
+.footerSum .Sum button, .Del button{
+  margin: 0 20rpx;
+  height: 60rpx;
+  font-size: 36rpx;
+  line-height: 60rpx;
+}

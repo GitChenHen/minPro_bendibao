@@ -1,0 +1,53 @@
+/* pages/profile/profile.wxss */
+.container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+}
+
+/* 用户信息样式 */
+
+.userinfo {
+  display: flex;
+  height: 10%;
+  width: 100vw;
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #ccc;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 用户头像样式 */
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+/* 昵称样式 */
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.userList {
+  width: 100%;
+}
+
+.userList view {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid #ccc;
+}
+.userList view:nth-child(5){
+  margin-top: 30rpx;
+
+}
+

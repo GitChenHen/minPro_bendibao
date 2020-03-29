@@ -1,0 +1,40 @@
+<!--pages/productDetail/productDetail.wxml-->
+<view class="container">
+<view><input password="{{false}}"></input></view>
+  <!-- 产品详情部分 -->
+  <view class="productBox">
+    <image src="{{detailObj.productImg}}"></image>
+    <view class="productDetail">
+      <view class="infos">{{detailObj.info}}</view>
+      <view class="price">￥{{detailObj.price}}</view>
+    </view>
+  </view>
+  <!-- 评论部分 -->
+  <view class="commentBox">
+    <view class="title">评论（{{detailObj.comments.length}}）</view>
+    <view class="list_Info" wx:for="{{detailObj.comments}}" wx:key="index">
+      <view class="user">
+        <view class="username">{{item.user}}</view>
+        <view class="time">
+          <text>{{item.time}}</text>
+          <text>来自：{{item.form}}</text>
+        </view>
+      </view>
+      <view class="content">
+        {{item.usercomment}}
+      </view>
+    </view>
+  </view>
+  <!--添加购物车部分  -->
+  <view class="addCartBox">
+    <view class="num">
+      <button data-num="{{num}}" bindtap="handleSub">-</button>
+      <input value="{{num}}" bindinput="handleNum"></input>
+      <button data-num="{{num}}" bindtap="handleAdd">+</button>
+    </view>
+    <view class="addcart">
+      <button class="addshop" bindtap="handleAddCart">添加购物</button>
+      <button class="addnow">立即购物</button>
+    </view>
+  </view>
+</view>

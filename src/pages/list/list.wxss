@@ -1,0 +1,59 @@
+/* pages/list/list.wxss */
+.container{
+  padding: 20rpx;
+}
+.list{
+  display: flex;
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+}
+/* 设置最后一个列表没有下边框 */
+.list:last-child{
+  border-bottom: none;
+}
+.list image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.list .info{
+  /* flex = 屏幕width - image的宽 */
+  flex: 1;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.list .info view{
+  line-height: 45rpx;
+}
+.list .info .address{  
+  /* 文本占用一行，超出则隐藏 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}
+.list .title{
+  font-size: 32rpx;
+  width: 300rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.list .star{
+  /* 绝对定位 不会占用位置*/
+  position: absolute;
+  /* 设置偏移量 */
+  right: 0;
+  top:10rpx;
+
+}
+.list .star view:nth-child(1){
+  color: #ccc;
+}
+.list .star view:nth-child(2){
+  color: orange;
+  position: absolute;
+  top: 0;
+  /* width: 50%; */
+  /* 超出隐藏 */
+  overflow: hidden;
+}

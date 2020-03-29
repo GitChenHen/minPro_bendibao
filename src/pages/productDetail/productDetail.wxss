@@ -1,0 +1,96 @@
+/* pages/productDetail/productDetail.wxss */
+
+.container {
+  min-height: 100vh;
+  padding-bottom: 80rpx;
+}
+
+.container .productBox {
+  width: 100vw;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.container .productBox image {
+  width: 500rpx;
+  height: 500rpx;
+  display: flex;
+  margin: 0 auto;
+}
+
+.container .productBox .price {
+  color: red;
+}
+
+.container .commentBox {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.container .commentBox .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+  border-left: 5px solid rgb(110, 130, 243);
+}
+
+.commentBox .list_Info {
+  padding: 20rpx;
+}
+
+.commentBox .list_Info .user {
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 34rpx;
+}
+
+.commentBox .list_Info .user .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.addCartBox {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.addCartBox .num {
+  display: flex;
+  flex: 1;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.addCartBox .num button, input {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.addCartBox .addcart {
+  display: flex;
+}
+
+.addCartBox .addcart .addshop {
+  flex: 1;
+  color: #fff;
+  font-size: 15px;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: orange;
+}
+
+.addCartBox .addcart .addnow {
+  flex: 1;
+  color: #fff;
+  font-size: 15px;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: orangered;
+}

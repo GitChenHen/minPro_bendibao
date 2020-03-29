@@ -1,0 +1,26 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <!-- 商品详情 -->
+  <image src="{{detailData.images[0]}}"></image>
+  <view class="infos">
+    <view class="title">{{detailData.name}}</view>
+    <view class="phone">电话：{{detailData.phone}}</view>
+    <view class="address">地址：{{detailData.address}}</view>
+    <view class="time">营业时间：双11--2019.11.11{{detailData.businessHours}}</view>
+  </view>
+  <!-- 客户评论 -->
+  <view class="comments" wx:for="{{detailData.comments}}" wx:key="index" wx:for-item="citem">
+    <view class="title">
+      <view class="left_Author">
+        {{citem.name}}
+      </view>
+      <view class="right_Date">
+        <text>{{citem.rating}}</text>
+        <text>{{citem.date}}</text>
+      </view>
+    </view>
+    <view class="commentInfo">
+      {{citem.content}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+
+<view class="container">
+  <!-- 用户头像 -->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- 用户信心列表 -->
+  <view class="userList">
+    <view>个人信息</view>
+    <view>资料收藏</view>
+    <view>个人账户</view>
+    <view>修改密码</view>
+    <view>相册</view>
+    <view>设置</view>
+  </view>
+</view>
